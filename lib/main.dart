@@ -5,6 +5,7 @@ import 'package:getapi/categorymap.dart';
 import 'package:getapi/fakeapicart.dart';
 import 'package:getapi/fakeproductapi.dart';
 import 'package:getapi/secongpage.dart';
+import 'package:getapi/streampage.dart';
 import 'package:getapi/userfakeapi.dart';
 import 'package:http/http.dart' as http;
 
@@ -84,7 +85,8 @@ class _ApicallingState extends State<Apicalling> {
               },
               leading: Icon(Icons.person),
               title: Text("Fake User api"),
-            ), ListTile(
+            ),
+            ListTile(
               onTap: () {
                 Navigator.pushReplacement(context, MaterialPageRoute(
                   builder: (context) {
@@ -94,6 +96,17 @@ class _ApicallingState extends State<Apicalling> {
               },
               leading: Icon(Icons.shopping_cart),
               title: Text("Fake Category api"),
+            ),
+            ListTile(
+              onTap: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(
+                  builder: (context) {
+                    return strampg();
+                  },
+                ));
+              },
+              leading: Icon(Icons.animation),
+              title: Text("Stream Builder"),
             )
           ],
         ),
